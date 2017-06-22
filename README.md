@@ -60,5 +60,14 @@ In my code I'm using [Ruby contracts](https://github.com/egonSchiele/contracts.r
 * Figuring out unicode and other string types.
 * The `get_file` and `put_file` methods are kinda big-ish and can be broken down into smaller chunks for readability/organizational purposes.
 * Dalli is EventMachine compatible. While I can't do much for IO bound performance (I think), making the network calls to Dalli asynchronous could be neato burrito.
+* Some of the code could be written more tersly
+
+## Testing
+
+Tests are written in RSpec. There could be more. They validate that a random file is generated, that it's stored in Memcache, and that the retrieved file matches the one that is local.
+
+`bundle exec rspec`
+
+I tested against whatever Memcache version is in Arch Linux's repositories and against CouchBase with the Memcache interface enabled. Tested both on Windows and Linux.
 
 ---
