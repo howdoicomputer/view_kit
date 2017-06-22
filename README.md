@@ -61,6 +61,7 @@ In my code I'm using [Ruby contracts](https://github.com/egonSchiele/contracts.r
 * The `get_file` and `put_file` methods are kinda big-ish and can be broken down into smaller chunks for readability/organizational purposes.
 * Dalli is EventMachine compatible. While I can't do much for IO bound performance (I think), making the network calls to Dalli asynchronous could be neato burrito.
 * Some of the code could be written more tersly
+* Account for larger value sizes. While I don't know the finer details of tuning Memcache, it'd be neat to have the code take in a max value size and then calculate the size of the chunks accordingly.
 
 ## Testing
 
