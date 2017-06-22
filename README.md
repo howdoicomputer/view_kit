@@ -69,6 +69,23 @@ Tests are written in RSpec. There could be more. They validate that a random fil
 
 `bundle exec rspec`
 
+Output:
+
+```
+✔︎ view_kit (master) bundle exec rspec
+
+ViewKit
+  has a version number
+  should generate a file
+  should split a file into chunks
+  should store a file into memcache
+  should raise an error if the file is already stored
+  should retrieve a file from memcache
+
+Finished in 0.27045 seconds (files took 0.06822 seconds to load)
+6 examples, 0 failures
+```
+
 I tested against whatever Memcache version is in Arch Linux's repositories and against CouchBase with the Memcache interface enabled. Tested both on Windows and Linux.
 
 ---
